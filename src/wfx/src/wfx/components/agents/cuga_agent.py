@@ -357,7 +357,7 @@ class CugaComponent(ToolCallingAgentComponent):
             tool_run_id = None
             # 3. Chain end event with AgentFinish
             async for event in cuga_agent.run_task_generic_yield(eval_mode=False, goal=current_input):
-                logger.debug(f"recieved event {event}")
+                logger.debug(f"received event {event}")
                 if last_event is not None and tool_run_id is not None:
                     logger.debug(f"last event {last_event}")
                     try:
